@@ -1,0 +1,95 @@
+:root {
+    /* ---------- Button primary (View Now, Search, Send) ---------- */
+    --button-primary-bg: var(--button-primary);
+    --button-primary-bg-hover: var(--button-primary-hover);
+    --button-primary-text: var(--text-light);
+    --button-primary-padding: 16px 60px;
+
+    /* ---------- Button secondary (Load more, Clear filters) ---------- */
+    --button-secondary-bg: var(--background);
+    --button-secondary-border: var(--border-primary);
+    --button-secondary-border-hover: var(--button-primary-hover);
+    --button-secondary-text: var(--text-primary);
+    --button-secondary-padding: 16px 32px;
+
+    /* ---------- Button common ---------- */
+    --button-height: 56px;
+    --button-font-weight: 500;
+    --button-letter-spacing: -0.08px;
+    --button-icon-gap: 4px;
+
+    /* ---------- Input (booking form) ---------- */
+    --input-bg: var(--foreground);
+    --input-text: var(--text-primary);
+    --input-placeholder: var(--text-label);
+    --input-height: 60px;
+    --input-padding: 18px;
+    --input-radius: 12px;
+    --input-gap: 14px;
+
+    /* ---------- Input error ---------- */
+    --input-error-bg: var(--bg-error);
+    --input-error-border: 1px solid var(--text-error);
+    --input-error-text: var(--text-error);
+    --input-error-accent: #EC383B; /* floating label and icon */
+    --input-error-label-font: var(--font-family-secondary);
+    --input-error-label-size: 12px;
+    --input-error-label-line-height: 16px;
+    --input-error-label-radius: 8px;
+    --input-error-label-padding: 0 8px;
+    --input-error-icon-size: 24px;
+
+    /* ---------- Input location (filters) ---------- */
+    --input-location-bg: var(--background);
+    --input-location-height: 56px;
+    --input-location-padding: 18px 20px;
+    --input-location-icon-size: 20px;
+    --input-location-gap: 8px;
+
+    /* ---------- Field label (Location, Camper form, Engine...) ---------- */
+    --label-color: var(--text-label);
+    --label-gap: 8px;
+
+    /* ---------- Radio ---------- */
+    --radio-size: 24px;
+    --radio-dot-size: 14px;
+    --radio-color: var(--text-secondary);
+    --radio-gap: 8px;
+
+    /* ---------- Badge (Petrol, Automatic, Alcove) ---------- */
+    --badge-bg: var(--tegs);
+    --badge-text: var(--text-primary);
+    --badge-padding: 12px 18px;
+    --badge-radius: 100px;
+    --badge-gap: 8px;
+    --badge-icon-size: 20px;
+
+    /* ---------- Link (header navigation) ---------- */
+    --link-color: var(--text-primary);
+    --link-color-active: var(--button-primary);
+    --link-font-weight: 500;
+    --link-gap: 32px;
+
+    /* ---------- Header ---------- */
+    --header-bg: var(--foreground);
+    --header-border: 1px solid var(--tegs);
+    --header-padding: 24px 64px;
+
+    /* ---------- Filters panel ---------- */
+    --filters-bg: var(--foreground);
+    --filters-padding: 24px;
+    --filters-radius: 20px;
+    --filters-width: 360px;
+
+    /* ---------- Camper card (catalog) ---------- */
+    --card-bg: var(--foreground);
+    --card-padding: 24px;
+    --card-gap: 24px;
+    --card-image-width: 219px;
+    --card-image-height: 240px;
+
+    /* ---------- Rating ---------- */
+    --star-size: 16px;
+    --star-filled: var(--rating);
+    --star-empty: var(--tegs);
+}

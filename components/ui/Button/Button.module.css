@@ -1,0 +1,66 @@
+button {
+    --border: var(--button-primary-bg);
+    --background: var(--button-primary-bg);
+    --text: var(--button-primary-text);
+
+    transition:
+            border-color var(--transition),
+            background-color var(--transition),
+            color var(--transition);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--button-icon-gap);
+    height: var(--button-height);
+    border: 1px solid var(--border);
+    border-radius: var(--button-radius);
+    background-color: var(--background);
+
+    font-family: inherit;
+    font-weight: var(--button-font-weight);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: var(--button-letter-spacing);
+    color: var(--text);
+
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+}
+
+/* Search, Send */
+.button--variant-primary {
+    --border: var(--button-primary-bg);
+    --background: var(--button-primary-bg);
+    --text: var(--button-primary-text);
+
+    padding: var(--button-primary-padding);
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+        --border: var(--button-primary-bg-hover);
+        --background: var(--button-primary-bg-hover);
+    }
+}
+
+
+.button--variant-secondary {
+    --border: var(--border-color);
+    --background: var(--button-secondary-bg);
+    --text: var(--button-secondary-text);
+
+    padding: var(--button-secondary-padding);
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+        --border: var(--button-secondary-border-hover);
+    }
+}

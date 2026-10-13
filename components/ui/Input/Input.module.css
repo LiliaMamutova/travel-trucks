@@ -1,0 +1,61 @@
+.wrapper {
+    width: 100%;
+}
+
+.field {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: var(--input-height);
+    padding: var(--input-padding);
+    color: var(--input-text);
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: var(--input-radius);
+    outline: none;
+    transition: border-color var(--transition);
+
+    &::placeholder {
+        color: var(--input-placeholder);
+    }
+
+    &:focus {
+        border-color: var(--border-color);
+    }
+}
+
+.error .input {
+    padding-right: 52px;
+    background-color: var(--input-error-bg);
+    border: var(--input-error-border);
+}
+
+.label {
+    position: absolute;
+    top: -8px;
+    left: 17px;
+    padding: var(--input-error-label-padding);
+    font-family: var(--input-error-label-font);
+    font-size: var(--input-error-label-size);
+    line-height: var(--input-error-label-line-height);
+    color: var(--input-error-accent);
+    background-color: var(--input-error-bg);
+    border-radius: var(--input-error-label-radius);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: var(--input-error-icon-size);
+    height: var(--input-error-icon-size);
+    fill: var(--input-error-accent);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.validity {
+    color: var(--input-error-text);
+}
