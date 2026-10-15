@@ -1,0 +1,32 @@
+.page {
+    padding: 48px 0;
+}
+
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 888px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.loadMore {
+    margin-top: 40px;
+}
+
+.message {
+    padding: 24px 0;
+    color: var(--text-secondary);
+}

@@ -1,4 +1,4 @@
-button {
+.button {
     --border: var(--button-primary-bg);
     --background: var(--button-primary-bg);
     --text: var(--button-primary-text);

@@ -52,7 +52,10 @@ export default function RootLayout({
       <TanStackQueryProvider>
         <Toaster />
         <Header />
-        <main>{children}</main>
+        <main>
+          {children}
+          {/*{modal}*/}
+        </main>
       </TanStackQueryProvider>
       </body>
       </html>

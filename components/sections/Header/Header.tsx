@@ -19,7 +19,7 @@ export default function Header(): React.ReactNode {
         <header className={css.header}>
             <div className={`container ${css.inner}`}>
                 <Link href="/" className={css.logo} aria-label="TravelTrucks home">
-                    <Icon name={"logo"} width={135} height={16}/>
+                    <Icon name={"logo"} width={136} height={16}/>
                 </Link>
 
                 <nav aria-label="Main navigation">

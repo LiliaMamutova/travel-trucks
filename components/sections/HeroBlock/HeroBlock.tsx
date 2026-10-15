@@ -7,7 +7,7 @@ const HeroBlock = () => {
     return (
         <section className={css.hero}>
             <Image
-                src="/campers.webp"
+                src="/travel-trucks.webp"
                 alt=""
                 fill
                 loading="eager"

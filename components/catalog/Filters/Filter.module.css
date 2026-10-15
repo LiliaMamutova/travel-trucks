@@ -1,0 +1,120 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    flex-shrink: 0;
+    width: var(--filters-width);
+    padding: var(--filters-padding);
+    border-radius: var(--filters-radius);
+    background-color: var(--filters-bg);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--label-gap);
+}
+
+.label {
+    padding: 0;
+    color: var(--label-color);
+}
+
+.location {
+    position: relative;
+}
+
+.locationIcon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: var(--input-location-icon-size);
+    height: var(--input-location-icon-size);
+    color: var(--text-primary);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.input {
+    width: 100%;
+    height: var(--input-location-height);
+    padding: 18px 20px 18px 48px;
+    border: 1px solid transparent;
+    border-radius: var(--input-radius);
+    background-color: var(--input-location-bg);
+    outline: none;
+    font: inherit;
+    color: var(--text-primary);
+    transition: border-color var(--transition);
+
+    &:focus {
+        border-color: var(--border-color);
+    }
+}
+
+.groups {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    & legend {
+        margin-bottom: 8px;
+    }
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: var(--radio-gap);
+    cursor: pointer;
+}
+
+.radio {
+    flex-shrink: 0;
+    width: var(--radio-size);
+    height: var(--radio-size);
+    margin: 0;
+    border: 1px solid var(--radio-color);
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+
+    &:checked {
+        background: radial-gradient(circle, var(--radio-color) 6.5px, transparent 7px);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--button-primary);
+        outline-offset: 2px;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.button {
+    width: 100%;
+}
