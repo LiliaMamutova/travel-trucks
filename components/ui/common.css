@@ -57,12 +57,12 @@
     --radio-gap: 8px;
 
     /* ---------- Badge (Petrol, Automatic, Alcove) ---------- */
-    --badge-bg: var(--tegs);
-    --badge-text: var(--text-primary);
-    --badge-padding: 12px 18px;
-    --badge-radius: 100px;
-    --badge-gap: 8px;
-    --badge-icon-size: 20px;
+    --radio-btn-bg: var(--tegs);
+    --radio-btn-text: var(--text-primary);
+    --radio-btn-padding: 12px 18px;
+    --radio-btn-radius: 100px;
+    --radio-btn-gap: 8px;
+    --radio-btn-icon-size: 20px;
 
     /* ---------- Link (header navigation) ---------- */
     --link-color: var(--text-primary);

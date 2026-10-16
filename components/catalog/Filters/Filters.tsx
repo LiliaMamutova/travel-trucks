@@ -1,6 +1,6 @@
 import {CamperFilters} from "@/types/camper";
-import {useState} from "react";
-import css from "./Filter.module.css";
+import {ChangeEvent, useState} from "react";
+import css from "./Filters.module.css";
 import {BsMap} from "react-icons/bs";
 import {ENGINE_LABELS, FORM_LABELS, TRANSMISSION_LABELS} from "@/constants/filters";
 import Button from "@/components/ui/Button/Button";
@@ -18,15 +18,27 @@ export const Filters = ({onSearch}: FiltersProps) => {
         onSearch({...draft, location: draft?.location?.trim() || undefined})
     }
 
-    const handleChangeLocation = (event) => {
-        setDraft({...draft, location: event.target.value})
+    const handleChangeLocation = (event: ChangeEvent<HTMLInputElement>) => {
+        setDraft({...draft, location: event.currentTarget.value})
     }
+
+    const handleChangeForm = (event: ChangeEvent<HTMLInputElement>) => {
+        setDraft({...draft, form: event.currentTarget.value as CamperFilters["form"]})
+    }
+
+    const handleChangeEngine = (event: ChangeEvent<HTMLInputElement>) => {
+        setDraft({...draft, engine: event.currentTarget.value as CamperFilters["engine"]})
+    }
+
+    const handleChangeTransmission = (event: ChangeEvent<HTMLInputElement>) => {
+        setDraft({...draft, transmission: event.currentTarget.value as CamperFilters["transmission"]})
+    }
+
 
     const handleClear = () => {
         setDraft({});
         onSearch({});
     }
-
 
     return (
         <form
@@ -62,8 +74,9 @@ export const Filters = ({onSearch}: FiltersProps) => {
                                 className={css.radio}
                                 type="radio"
                                 name="form"
+                                value={value}
                                 checked={draft.form === value}
-                                onChange={() => setDraft({...draft, form: value as CamperFilters["form"]})}
+                                onChange={handleChangeForm}
                             />
                             {label}
                         </label>
@@ -79,8 +92,9 @@ export const Filters = ({onSearch}: FiltersProps) => {
                                     className={css.radio}
                                     type="radio"
                                     name="engine"
+                                    value={value}
                                     checked={draft.engine === value}
-                                    onChange={() => setDraft({...draft, engine: value as CamperFilters["engine"]})}
+                                    onChange={handleChangeEngine}
                                 />
                                 {label}
                             </label>
@@ -96,8 +110,9 @@ export const Filters = ({onSearch}: FiltersProps) => {
                                     className={css.radio}
                                     type="radio"
                                     name="transmission"
+                                    value={value}
                                     checked={draft.transmission === value}
-                                    onChange={() => setDraft({...draft, transmission: value as CamperFilters["transmission"]})}
+                                    onChange={handleChangeTransmission}
                                 />
                                 {label}
                             </label>
@@ -115,7 +130,7 @@ export const Filters = ({onSearch}: FiltersProps) => {
                 <Button
                     className={css.button}
                     variant="secondary"
-                    onChange={handleClear}
+                    onClick={handleClear}
                 >
                     <IoCloseOutline size={24} aria-hidden />
                     Clear filters

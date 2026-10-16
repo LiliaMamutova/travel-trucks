@@ -74,6 +74,6 @@ export interface GalleryImage {
     order: number;
 }
 
-// export interface CamperDetails extends Omit<Camper, "coverImage"> {
-//     gallery: GalleryImage[];
-// }
+export interface CamperDetails extends Omit<Camper, "coverImage"> {
+    gallery: GalleryImage[];
+}

@@ -4,18 +4,22 @@ import {useState} from "react";
 import {CamperFilters} from "@/types/camper";
 import {useInfiniteQuery} from "@tanstack/react-query";
 import {getCampers} from "@/lib/api/api";
-import css from "./Catalog.client.module.css";
-import Loading from "@/app/loading";
+import css from "./CatalogСlient.module.css";
 import Button from "@/components/ui/Button/Button";
+import {CamperCard} from "@/components/catalog/CamperCard/CamperCard";
+import {Filters} from "@/components/catalog/Filters/Filters";
+import Loader from "@/components/ui/Loader/Loader";
+import {NoCampers} from "@/components/catalog/NoCampers/NoCampers";
 
 const PER_PAGE = 4;
 
 export const CatalogClient = () => {
     const [filters, setFilters] = useState<CamperFilters>({});
+    const [resetKey, setResetKey] = useState(0);
 
     const {
         data,
-        isLoading,
+        isFetching,
         isError,
         fetchNextPage,
         hasNextPage,
@@ -35,31 +39,32 @@ export const CatalogClient = () => {
     const handleClick = () => {
         fetchNextPage();
     }
+    const handleReset = ()=> {
+        setFilters({});
+        setResetKey((key) => key + 1);
+    }
 
     return (
         <div className={css.page}>
             <div className={css.layout}>
                 <h1 className="visually-hidden">Campers catalog</h1>
-
+                <Filters key={resetKey} onSearch={setFilters} />
                 <section className={css.results}>
-                    {isLoading && <Loading/>}
                     {isError && <p className={css.message}>Something went wrong. Please try again later.</p>}
-
-                    {!isLoading && !isError && campers.length === 0 && (
-                        <p className={css.message}>No campers found for your request.</p>
+                    {!isFetching && !isError && campers.length === 0 && (
+                        <NoCampers onReset={handleReset}/>
                     )}
 
                     {campers.length > 0 && (
                         <ul className={css.list}>
                             {campers.map((camper) => (
                                 <li key={camper.id}>
-                                    {/*<CamperCard camper={camper} />*/}
+                                    <CamperCard camper={camper} />
                                 </li>
                             ))}
                         </ul>
                     )}
 
-                    {isFetchingNextPage && <Loading/>}
                     {hasNextPage && !isFetchingNextPage && (
                         <Button
                             variant="secondary"
@@ -70,6 +75,7 @@ export const CatalogClient = () => {
                     )}
                 </section>
             </div>
+            {isFetching && <Loader />}
         </div>
     )
 }

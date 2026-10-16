@@ -1,0 +1,78 @@
+.card {
+    display: flex;
+    gap: var(--card-gap);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    background-color: var(--card-bg);
+}
+
+.image {
+    flex-shrink: 0;
+    width: var(--card-image-width);
+    height: var(--card-image-height);
+    border-radius: var(--card-radius);
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    min-width: 0;
+    width: 524px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.title,
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.details {
+    display: flex;
+    gap: 16px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    & svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.star {
+    color: var(--star-filled);
+}
+
+.description {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--text-secondary);
+}
+
+.radioBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}

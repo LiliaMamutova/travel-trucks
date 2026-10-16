@@ -1,5 +1,13 @@
 import axios, {AxiosInstance} from "axios";
-import {Camper, CamperEngine, CamperForm, CampersResponse, CamperTransmission, Review} from "@/types/camper";
+import {
+    Camper,
+    CamperDetails,
+    CamperEngine,
+    CamperForm,
+    CampersResponse,
+    CamperTransmission,
+    Review
+} from "@/types/camper";
 
 export const api: AxiosInstance = axios.create({
     baseURL: "https://campers-api.goit.study",
@@ -28,8 +36,8 @@ export const getCampers = async (params: FetchCampersParams): Promise<CampersRes
     return data;
 }
 
-export const getCamperById = async (id: string): Promise<Camper> => {
-    const { data } = await api.get<Camper>(`/campers/${id}`);
+export const getCamperById = async (id: string): Promise<CamperDetails> => {
+    const { data } = await api.get<CamperDetails>(`/campers/${id}`);
     return data;
 }
 

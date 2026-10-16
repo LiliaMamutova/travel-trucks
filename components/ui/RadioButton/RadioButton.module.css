@@ -1,0 +1,19 @@
+.radioBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--radio-btn-gap);
+    padding: var(--radio-btn-padding);
+    border-radius: var(--radio-btn-radius);
+    background-color: var(--radio-btn-bg);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--radio-btn-text);
+}
+
+.icon {
+    flex-shrink: 0;
+    width: var(--radio-btn-icon-size);
+    height: var(--radio-btn-icon-size);
+}
