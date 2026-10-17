@@ -36,4 +36,4 @@ export default function Header(): React.ReactNode {
             </div>
         </header>
     );
-}
+};

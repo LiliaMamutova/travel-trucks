@@ -7,15 +7,15 @@ import RadioButton from "@/components/ui/RadioButton/RadioButton";
 import {ENGINE_ICONS, FORM_ICONS, TRANSMISSION_ICONS} from "@/constants/icons";
 import {ENGINE_LABELS, FORM_LABELS, TRANSMISSION_LABELS} from "@/constants/filters";
 import Link from "@/components/ui/Link/Link";
+import {formatLocation} from "@/utils/format";
 
 interface CamperCardProps {
     camper: Camper;
 
 }
 
-export const CamperCard = ({ camper }: CamperCardProps) => {
+export default function CamperCard ({ camper }: CamperCardProps) {
     const { id, name, price, rating, totalReviews, location, description, coverImage, engine, transmission, form } = camper;
-    const locationReverse = location.split(", ").reverse().join(", ");
 
     return (
         <article className={css.card}>
@@ -38,7 +38,7 @@ export const CamperCard = ({ camper }: CamperCardProps) => {
                         </p>
                         <p className={css.detail}>
                             <BsMap aria-hidden/>
-                            {locationReverse}
+                            {formatLocation(location)}
                         </p>
                     </div>
                 </div>
@@ -56,8 +56,4 @@ export const CamperCard = ({ camper }: CamperCardProps) => {
 
         </article>
     )
-
-
-
-
 }

@@ -1,0 +1,29 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    flex-shrink: 0;
+    width: 638px;
+}
+
+.main {
+    width: 100%;
+    height: 505px;
+    border-radius: var(--card-radius);
+}
+
+.thumb {
+    height: 144px;
+    border: 3px solid transparent;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thumb:global(.swiper-slide-thumb-active) {
+    border-color: var(--button-primary);
+}
+
+.image {
+    object-fit: cover;
+}

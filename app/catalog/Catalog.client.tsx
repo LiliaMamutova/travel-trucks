@@ -6,14 +6,14 @@ import {useInfiniteQuery} from "@tanstack/react-query";
 import {getCampers} from "@/lib/api/api";
 import css from "./CatalogСlient.module.css";
 import Button from "@/components/ui/Button/Button";
-import {CamperCard} from "@/components/catalog/CamperCard/CamperCard";
-import {Filters} from "@/components/catalog/Filters/Filters";
+import CamperCard from "@/components/catalog/CamperCard/CamperCard";
+import Filters from "@/components/catalog/Filters/Filters";
 import Loader from "@/components/ui/Loader/Loader";
-import {NoCampers} from "@/components/catalog/NoCampers/NoCampers";
+import NoCampers from "@/components/catalog/NoCampers/NoCampers";
 
 const PER_PAGE = 4;
 
-export const CatalogClient = () => {
+export default function CatalogClient () {
     const [filters, setFilters] = useState<CamperFilters>({});
     const [resetKey, setResetKey] = useState(0);
 
@@ -77,5 +77,5 @@ export const CatalogClient = () => {
             </div>
             {isFetching && <Loader />}
         </div>
-    )
-}
+    );
+};

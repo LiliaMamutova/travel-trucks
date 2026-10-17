@@ -10,7 +10,7 @@ interface FiltersProps {
     onSearch: (filters: CamperFilters) => void;
 }
 
-export const Filters = ({onSearch}: FiltersProps) => {
+export default function Filters ({onSearch}: FiltersProps) {
     const [draft, setDraft] = useState<CamperFilters>({});
 
     const handleSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {

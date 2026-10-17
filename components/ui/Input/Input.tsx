@@ -56,4 +56,4 @@ export default function Input({ onBlur, onInput, onInvalid, className, placehold
             {validationError && <p className={css["validity"]}>{validationError}</p>}
         </div>
     );
-}
+};

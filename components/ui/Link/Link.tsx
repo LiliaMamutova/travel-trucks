@@ -20,5 +20,5 @@ export default function Link({ children, className, variant = "nav", active = fa
             {children}
         </NextLink>
     );
-}
+};
 

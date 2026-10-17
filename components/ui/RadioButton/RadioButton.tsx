@@ -13,4 +13,4 @@ export default function RadioButton({ icon: Icon, children }: RadioButtonProps) 
             {children}
         </span>
     );
-}
+};

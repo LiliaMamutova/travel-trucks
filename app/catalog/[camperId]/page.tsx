@@ -33,6 +33,5 @@ export default async function CamperPage({ params }: CamperPageProps){
         <div className={css.page}>
             {}
         </div>
-
-    )
-}
+    );
+};

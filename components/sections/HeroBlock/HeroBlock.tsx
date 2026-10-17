@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "@/components/ui/Link/Link";
 
 
-const HeroBlock = () => {
+export default function HeroBlock () {
     return (
         <section className={css.hero}>
             <Image
@@ -27,7 +27,5 @@ const HeroBlock = () => {
                 </div>
             </div>
         </section>
-    )
-}
-
-export default HeroBlock;
+    );
+};

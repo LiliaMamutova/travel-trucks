@@ -7,7 +7,7 @@ interface NoCampersProps {
     onReset: () => void;
 }
 
-export const NoCampers = ({ onReset }: NoCampersProps) => {
+export default function NoCampers ({ onReset }: NoCampersProps) {
     return (
         <div className={css.wrapper}>
             <Image
@@ -39,5 +39,5 @@ export const NoCampers = ({ onReset }: NoCampersProps) => {
                 </Button>
             </div>
         </div>
-    )
-}
+    );
+};

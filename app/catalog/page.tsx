@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import {CatalogClient} from "./Catalog.client";
+import CatalogClient from "./Catalog.client";
 
 export const metadata: Metadata = {
     title: "Catalog | TravelTrucks",

@@ -16,4 +16,4 @@ export default function Icon({name, width = 24, height = width, className, ...pr
             <use href={`/icons/sprite.svg#${name}`}></use>
         </svg>
     );
-}
+};

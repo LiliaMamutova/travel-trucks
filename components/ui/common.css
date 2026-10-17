@@ -91,5 +91,6 @@
     /* ---------- Rating ---------- */
     --star-size: 16px;
     --star-filled: var(--rating);
-    --star-empty: var(--tegs);
+    --star-empty: var(--border-color);
+
 }
