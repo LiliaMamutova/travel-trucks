@@ -11,7 +11,6 @@ import {formatLocation} from "@/utils/format";
 
 interface CamperCardProps {
     camper: Camper;
-
 }
 
 export default function CamperCard ({ camper }: CamperCardProps) {
@@ -31,8 +30,8 @@ export default function CamperCard ({ camper }: CamperCardProps) {
                         <h2 className={css.title}>{name}</h2>
                         <p className={css.price}>€{price}</p>
                     </div>
-                    <div>
-                        <p className={css.star} aria-hidden>
+                    <div className={css.details}>
+                        <p className={css.detail} aria-hidden>
                             <FaStar className={css.star} aria-hidden />
                             {rating}({totalReviews} Reviews)
                         </p>
@@ -53,7 +52,6 @@ export default function CamperCard ({ camper }: CamperCardProps) {
                 Show more
             </Link>
             </div>
-
         </article>
-    )
-}
+    );
+};

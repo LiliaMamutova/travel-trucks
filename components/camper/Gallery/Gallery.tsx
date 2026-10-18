@@ -3,11 +3,11 @@
 import {GalleryImage} from "@/types/camper";
 import {useState} from "react";
 import { Swiper as SwiperType } from "swiper"
-import css from "./Gallery.module.css";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Thumbs} from "swiper/modules";
 import Image from "next/image";
-
+import "swiper/css";
+import css from "./Gallery.module.css";
 
 interface GalleryProps {
     images: GalleryImage[];
@@ -22,10 +22,10 @@ export default function Gallery({ images, name } : GalleryProps) {
             <Swiper modules={[Thumbs]} thumbs={{swiper: thumbsSwiper}} className={css.main}>
                 {images.map((image) =>
                 <SwiperSlide key={image.id}>
-                    <Image src={image.original} alt={name} fill sizes="638" className={css.image} />
+                    <Image src={image.original} alt={name} fill sizes="638px" className={css.image} />
                 </SwiperSlide>)}
             </Swiper>
-            <Swiper modules={[Thumbs]} onSwiper={setThumbsSwiper} slidesPerView={4} spaceBetween={32}>
+            <Swiper modules={[Thumbs]} onSwiper={setThumbsSwiper} slidesPerView={4} spaceBetween={32} className={css.thumbs}>
                 {images.map((image) => (
                     <SwiperSlide key={image.id} className={css.thumb}>
                         <Image src={image.thumb} alt={name} fill sizes="136px" className={css.image} />

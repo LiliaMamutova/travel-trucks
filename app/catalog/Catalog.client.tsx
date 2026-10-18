@@ -46,7 +46,7 @@ export default function CatalogClient () {
 
     return (
         <div className={css.page}>
-            <div className={css.layout}>
+            <div className={`container ${css.layout}`}>
                 <h1 className="visually-hidden">Campers catalog</h1>
                 <Filters key={resetKey} onSearch={setFilters} />
                 <section className={css.results}>

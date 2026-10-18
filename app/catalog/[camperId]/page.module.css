@@ -1,3 +1,40 @@
 .page {
+    padding: 64px 0 80px;
+}
 
+.top {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    min-width: 0;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 88px;
+}
+
+.title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.reviews {
+    flex: 1;
+    min-width: 0;
 }
