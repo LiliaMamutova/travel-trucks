@@ -1,6 +1,5 @@
 import axios, {AxiosInstance} from "axios";
 import {
-    Camper,
     CamperDetails,
     CamperEngine,
     CamperForm,
@@ -10,7 +9,7 @@ import {
 } from "@/types/camper";
 
 export const api: AxiosInstance = axios.create({
-    baseURL: "https://campers-api.goit.study",
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
 });
 
 export interface FetchCampersParams {
@@ -44,7 +43,6 @@ export const getCamperById = async (id: string): Promise<CamperDetails> => {
 export const getReviews = async (id: string): Promise<Review[]> => {
     const { data } = await api.get<Review[]>(`/campers/${id}/reviews`);
     return data;
-
 }
 
 export const createBooking = async (camperId: string, body: BookingRequest): Promise<BookingResponse>  => {
