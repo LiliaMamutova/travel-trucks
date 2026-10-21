@@ -2,7 +2,7 @@
 
 Frontend for **TravelTrucks**, a camper rental service. Users can browse the camper catalog, filter it by location, body type, engine and transmission, open a detailed page for any camper and send a booking request.
 
-🔗 **Live demo:** [travel-trucks.vercel.app](https://travel-trucks.vercel.app)
+🔗 **Live demo:** [travel-trucks.vercel.app](https://travel-trucks-xi-lyart.vercel.app/)
 
 ## Features
 
@@ -79,3 +79,7 @@ lib/api/              # API requests
 types/                # TypeScript types
 utils/                # Formatting helpers
 ```
+
+## Developers
+
+[Mamutova Lilia - FullStack Developer](https://www.linkedin.com/in/lilia-mamutova/)

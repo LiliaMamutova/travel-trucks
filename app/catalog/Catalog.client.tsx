@@ -4,7 +4,7 @@ import {useState} from "react";
 import {CamperFilters} from "@/types/camper";
 import {useInfiniteQuery} from "@tanstack/react-query";
 import {getCampers} from "@/lib/api/api";
-import css from "./CatalogСlient.module.css";
+import css from "./CatalogClient.module.css";
 import Button from "@/components/ui/Button/Button";
 import CamperCard from "@/components/catalog/CamperCard/CamperCard";
 import Filters from "@/components/catalog/Filters/Filters";

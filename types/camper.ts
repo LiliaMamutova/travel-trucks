@@ -34,14 +34,6 @@ export interface Camper {
     updatedAt: string;
 }
 
-export interface CampersResponse {
-    page: number;
-    perPage: number;
-    total: number;
-    totalPages: number;
-    campers: Camper[];
-}
-
 export interface Review {
     id: string;
     camperId: string;

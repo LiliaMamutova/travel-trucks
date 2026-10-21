@@ -1,9 +1,8 @@
 .hero {
     position: relative;
-    height: 696px;
+    height: calc(100dvh - 72px);
+    min-height: 696px;
     overflow: hidden;
-    max-width: 1440px;
-    margin: 0 auto;
 
     color: var(--foreground);
 }
